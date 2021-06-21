@@ -1,0 +1,28 @@
+.link {
+  text-decoration: none;
+  position: relative;
+
+  /* border-bottom: 5px solid #212529; */
+  transition: 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  width: 0px;
+  bottom: -5px;
+  background: #ff3f6a;
+  height: 5px;
+  transition-property: width;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.link:focus::after,
+.link:hover::after {
+  left: 0px;
+  right: auto;
+  width: 100%;
+}

@@ -11,7 +11,7 @@ export const Footer = () => {
             {/* <h1 className='display-6'>Let's work together...</h1> */}
             <h6>
 
-            @ Copyright {curYear} by <span className='text-danger'> ROHAN MALLICK</span>
+            @ Copyright {curYear} by <span className='text-danger' style={{fontSize:'17px'}}> ROHAN MALLICK</span>
             </h6>
           
             <div className="d-flex  mt-1">

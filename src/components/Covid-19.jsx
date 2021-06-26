@@ -1,5 +1,6 @@
 import React, { useEffect , useState } from 'react'
 import "../css/Covid19.css";
+import '../css/Nav.css'
 
 
 const Card = (pro) => {
@@ -37,7 +38,7 @@ const [data , setData ] = useState([]);
             try{
                 const res = await fetch('https://api.covid19india.org/data.json');
                 const acData = await res.json();
-                console.log(acData.statewise[0])
+                // console.log(acData.statewise[0])
                 setData(acData.statewise[0]);
 
             }catch(err){
@@ -52,14 +53,14 @@ const [data , setData ] = useState([]);
        
         <>
             <h5 className='text-center mt-5 live-img'> 🔴 LIVE </h5>
-            <h2 className='text-center display-6'> COVID-19  CORONAVIRUS TRACKER</h2>
+            <h2 className='text-center '> <span className='link display-5'>COVID-19  TRACKER</span> </h2>
             
 
-            <section className='container mt-5'>
+            <section className='container mt-4'>
             <div className="row ">
                 <Card 
                 color ='bk-1'
-                title='Our Conuntry'
+                title='India'
                 text='1366400000'
                 icon='fas fa-globe-africa'
                
